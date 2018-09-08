@@ -1,0 +1,24 @@
+#instead of defining this stuff on command, much easier to put it in docker compose script
+version: '3.4'
+
+services:
+ product-service:
+   build: ./product
+   volumes:
+    - ./product:/usr/src/app
+   ports:
+    - 5001:80
+
+#an alternative to specifying a directory to build with a Dockerfile inside, we can define the image
+#we want here, so its pulled down from Docker hub and run directly
+ website:
+   image: php:apache
+   volumes:
+    - ./website:/var/www/html
+   ports:
+    - 5000:80
+   depends_on:
+    - product-service
+
+    #the website will not work unless the product-service api is up and running and therefore "depends on" it
+    #and so we use the depends_on property
