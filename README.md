@@ -1,3 +1,5 @@
+Original tutal from those created on YouTube by Jake Wright
+
 # About Docker Compose
 
 Docker compose is a tool for defining and running multi-container Docker applications. All the containers that are run using Docker compose are running on a virtual Docker network, and therefore they can talk to one another using this network.
