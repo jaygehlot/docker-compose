@@ -1,4 +1,4 @@
-Original tutal from those created on YouTube by Jake Wright
+Original tutorial from those created on YouTube by Jake Wright - https://www.youtube.com/watch?v=Qw9zlE3t8Ko
 
 # About Docker Compose
 
